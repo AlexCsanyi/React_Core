@@ -18,7 +18,29 @@
         ]);
       };
 
-      const App = () => {
+      class App extends React.Component {
+        render() {
+          return React.createElement("div", {}, [
+            React.createElement("h1", {}, "REACT IS RENDERED"),
+            React.createElement(Person, {
+              name: "Alex",
+              occupation: "developer"
+            }),
+            React.createElement(Person, {
+              name: "Alexander",
+              occupation: "creator"
+            }),
+            React.createElement(Person, {
+              name: "Alexis",
+              occupation: "investor"
+            })
+          ]);
+        }
+      }
+
+      /* Functional component
+     
+     const App = () => {
         return React.createElement("div", {}, [
           React.createElement("h1", {}, "REACT IS RENDERED"),
           React.createElement(Person, {
@@ -34,7 +56,7 @@
             occupation: "investor"
           })
         ]);
-      };
+      }; */
 
       ReactDOM.render(
         React.createElement(App),
